@@ -1,8 +1,11 @@
 {
     "name": "@lukasschreiber/icons",
     "version": "0.1.0",
-    "private": true,
     "type": "module",
+    "private": false,
+    "publishConfig": {
+        "access": "restricted"
+    },
     "sideEffects": false,
     "main": "./dist/index.cjs",
     "module": "./dist/index.js",
@@ -12,10 +15,16 @@
             "types": "./dist/index.d.ts",
             "import": "./dist/index.js",
             "require": "./dist/index.cjs"
+        },
+        "./*": {
+            "types": "./dist/*.d.ts",
+            "import": "./dist/*.js",
+            "require": "./dist/*.cjs"
         }
     },
     "files": [
-        "dist"
+        "dist",
+        "README.md"
     ],
     "scripts": {
         "generate": "node scripts/generate-icons.mjs",
@@ -30,6 +39,7 @@
         "@svgr/plugin-jsx": "latest",
         "@svgr/plugin-svgo": "latest",
         "@types/react": "^19.2.14",
+        "glob": "^13.0.6",
         "prettier": "latest",
         "tsup": "latest",
         "typescript": "latest"
