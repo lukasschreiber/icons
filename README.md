@@ -5,7 +5,7 @@ React SVG icon library.
 ## Installation
 
 ``` bash
-npm install @lukasschreiber/icons
+npm install git+ssh://git@github.com/lukasschreiber/icons.git#v0.1.0
 ```
 
 ## Usage
@@ -25,6 +25,10 @@ export default function Example() {
 -   React 18+
 -   TypeScript support
 
-## License
+## Bump Version
 
-MIT
+``` bash 
+npm version patch
+git push
+git push --tags
+``` 

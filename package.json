@@ -29,6 +29,7 @@
     "scripts": {
         "generate": "node scripts/generate-icons.mjs",
         "build": "npm run generate && tsup",
+        "prepare": "npm run build",
         "prepublishOnly": "npm run build"
     },
     "peerDependencies": {
